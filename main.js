@@ -1,6 +1,6 @@
 $(function(){
-    console.log('start');
-    $('#main .btn').click(function(){
-        alert('click');
-    });
+  console.log('start');
+  $('#main .btn').click(function(){
+    alert('click');
+  });
 });

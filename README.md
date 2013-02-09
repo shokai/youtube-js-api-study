@@ -1,4 +1,4 @@
 JavaScript Template
 ===================
 
-* jQuery 1.7.2
+* jQuery 1.9.0

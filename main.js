@@ -20,12 +20,12 @@ $(function(){
   var btn_play = $("#btn_play");
   btn_play.click(function(e){
     if(youtube.getPlayerState() == 1){
-      youtube.stopVideo();
+      youtube.pauseVideo();
       btn_play.val('play');
     }
     else{
       youtube.playVideo();
-      btn_play.val('stop');
+      btn_play.val('pause');
     }
   });
 

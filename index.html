@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" content="text/html" http-equiv="Content-Type" />
-    <title>JavaScript Template</title>
+    <title>YouTube Player</title>
     <style type="text/css">
       div {
         margin : 15px;
@@ -13,22 +13,30 @@
         border : 2px solid #BBB;
         border-radius : 8px;
       }
+      input {
+        font-size : medium;
+      }
     </style>
   </head>
   <body>
-    <h1>JavaScript Template</h1>
+    <h1>YouTube Player</h1>
     <div id="main">
-      <h2>click</h2>
-      <div class="name">
-        <span>name :</span>
-        <span class="btn">
-          shokai
-        </span>
+      <div id="youtube_player">
+      </div>
+      <div class="ctrl">
+        <div>
+          <input type="button" value="play" class="btn" id="btn_play" />
+        </div>
+        <div>
+          <input type="button" value="<<" class="btn" id="btn_seekback" />
+          <input type="button" value=">>" class="btn" id="btn_seek" />
+        </div>
       </div>
     </div>
     <hr />
     github : <a href="https://github.com/shokai/js-template">https://github.com/shokai/js-template</a>
     <script src="jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="swfobject.js" type="text/javascript"></script>
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>

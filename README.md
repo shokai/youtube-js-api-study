@@ -1,4 +1,4 @@
-JavaScript Template
-===================
+YouTube JavaScript API Study
+============================
 
-* jQuery 1.9.0
+* https://developers.google.com/youtube/js_api_reference

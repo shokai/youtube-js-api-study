@@ -16,6 +16,9 @@
       input {
         font-size : medium;
       }
+      input.range {
+        width : 300px;
+      }
     </style>
   </head>
   <body>
@@ -23,15 +26,19 @@
     <div id="main">
       <div id="youtube_player">
       </div>
+      <div id="video_url"></div>
       <div class="ctrl">
         <div>
           <span>video id :</span>
           <input type="text" value="Zhawgd0REhA" id="video_id" />
           <input type="button" value="load" class="btn" id="btn_load" />
-          <span id="video_url" />
         </div>
         <div>
           <input type="button" value="play" class="btn" id="btn_play" />
+        </div>
+        <div>
+          <input type="range" min="0" max="1255" value="0" class="range" id="range_seek" />
+          <input type="text" readonly="true" size="7" id="text_seek" />
         </div>
         <div>
           <input type="button" value="<<" class="btn" id="btn_seekback" />

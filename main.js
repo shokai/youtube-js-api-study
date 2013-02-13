@@ -8,6 +8,11 @@ var onYouTubePlayerReady = function(id){
 
 var onYouTubeStateChange = function(status){
   console.log("status changed:"+status);
+  switch(status){
+  case 5:
+    $("range_seek").attr("max", youtube.getDuration());
+    break;
+  };
 };
 
 
@@ -39,9 +44,20 @@ $(function(){
   });
 
   $("#btn_seek").click(function(e){
-    youtube.seekTo(youtube.getCurrentTime() + 10);
+    youtube.seekTo(youtube.getCurrentTime() + 20);
   });
   $("#btn_seekback").click(function(e){
-    youtube.seekTo(youtube.getCurrentTime() - 10);
+    youtube.seekTo(youtube.getCurrentTime() - 20);
   });
+
+  var range_seek = $("#range_seek");
+  range_seek.change(function(e){
+    youtube.seekTo(range_seek.val());
+  });
+
+  setInterval(function(){
+    var time = youtube.getCurrentTime();
+    $("#range_seek").val(time);
+    $("#text_seek").val(time);
+  }, 1000);
 });
